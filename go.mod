@@ -1,4 +1,4 @@
-module github.com/club404/hugo-theme
+module github.com/club404/theme
 
 go 1.20
 
