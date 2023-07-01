@@ -1,0 +1,256 @@
+baseURL: ''
+title: Club404
+languageCode: en-us
+DefaultContentLanguage: en
+enableEmoji: true
+enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: true
+paginate: 9
+darkmode_js:
+  - assets/js/darkmode.js
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: download
+      name: Downloads
+      url: /download/
+      weight: 20
+    - identifier: products
+      pre: complexdropdown
+      name: Products
+      weight: 30
+    - identifier: services
+      pre: complexdropdown
+      name: Services
+      weight: 40
+    - identifier: blog
+      name: Blog
+      url: /categories/blog/
+      weight: 60
+    - identifier: contact
+      name: Contact Us
+      url: /contact/
+      weight: 100
+  categories:
+    - identifier: tryhackme
+      name: TryHackMe
+      url: /tryhackme/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+  products:
+    - identifier: web
+      pre: piechart # can be stars, comments or piechart
+      name: Club404 - Online (free)
+      post: Run in a sandboxed browser environment
+      url: "#"
+      weight: 10
+    - identifier: desktop
+      pre: piechart # can be stars, comments or piechart
+      name: Club404 - Desktop (free)
+      post: Run natively within your Operating System
+      url: "#"
+      weight: 20
+    - identifier: cloud
+      pre: piechart # can be stars, comments or piechart
+      name: Club404 - Cloud Native (free)
+      post: Run inside a Kubernetes cluster
+      url: "#"
+      weight: 30
+    - identifier: server
+      pre: stars # can be stars, comments or piechart
+      name: Club404 - Enterprise Server (paid)
+      post: Self-hosted, forwards events to your SIEM
+      url: "#"
+      weight: 40
+    - identifier: tryhackme
+      pre: stars # can be stars, comments or piechart
+      name: Club404 - TryHackMe! (paid)
+      post: Teaching you the basics of common exploits
+      url: /tryhackme/
+      weight: 40
+  services:
+    - identifier: identify
+      pre: stars # can be stars, comments or piechart
+      name: Identify (free)
+      post: Discover assets(s) in your network
+      url: "#"
+      weight: 10
+    - identifier: protect
+      pre: comments # can be stars, comments or piechart
+      name: Protect (free, for awareness)
+      post: Secure whats important to you
+      url: "#"
+      weight: 20
+    - identifier: detect
+      pre: piechart # can be stars, comments or piechart
+      name: Detect (paid or trial)
+      post: Probe assets for known vulnerabilities
+      url: "#"
+      weight: 30
+    - identifier: respond
+      pre: stars # can be stars, comments or piechart
+      name: Respond (paid)
+      post: Test your resilience to probes & attacks
+      url: "#"
+      weight: 30
+    - identifier: recover
+      pre: stars # can be stars, comments or piechart
+      name: Recover (paid)
+      post: Ransomware, backups & disaster recovery
+      url: "#"
+      weight: 40
+
+  footer:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /categories/blog/
+      weight: 20
+    - identifier: news
+      name: News
+      url: /categories/news/
+      weight: 30
+    - identifier: products
+      name: Products
+      url: /products/
+      weight: 40
+    - identifier: services
+      name: Services
+      url: /services/
+      weight: 40
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+
+params:
+  author: Unknown
+  authorimage: ../assets/images/global/users/default.webp  
+
+  banner:
+    image: images/home/banner-left.png
+    heading: Example demo site for this theme
+    description: This is a theme created for club404.io, designed and made for Hugo
+
+  featured:
+    heading: Our mission
+    image: images/home/our-mission.png
+    content:
+      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
+      - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
+      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+    links:
+      - text: Read more about our Software Architecture
+        url: "#"
+
+  featured2:
+    heading: Some more featured content
+    image: images/home/our-mission.png
+    content:
+      - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
+      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+    links:
+      - text: See more
+        url: "#"
+
+  partners:
+    heading: Our partners
+    content:
+      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+    links:
+      - text: Contact us!
+        url: "#"
+    logos:
+      - identifier: a
+        image: "images/global/backers/default-white.svg"
+        alt: "a"
+      - identifier: b
+      - identifier: c
+      - identifier: d
+      - identifier: e
+      - identifier: f
+
+  news:
+    heading: Latest News
+    content:
+      - text: "Read up on our latest news and most recent blog posts."
+
+  subscribe:
+    heading: "Stay Up to Date"
+    content:
+      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
+    action: "#"
+    label: "Email address"
+    placeholder: "Enter your email"
+    button: "Subscribe"
+
+  disable_theme_toggle: false
+  disable_stay_uptodate: false
+
+  social_media:
+    twitter:
+      enabled: false
+    facebook:
+      enabled: false
+    instagram:
+      enabled: false
+    github:
+      enabled: true
+      url: 'https://github.com/club404/theme'
+    
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  category: Categories
+  tag: Tags
+
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+  instagram:
+    disable: false
+    simple: false
+  twitter:
+    disable: false
+    enableDNT: false
+    simple: false
+  vimeo:
+    disable: false
+    enableDNT: false
+    simple: false
+  youtube:
+    disable: false
+    privacyEnhanced: true
+
+#server:
+#  headers:
+#    - for: /**
+#      values:
+#        Referrer-Policy: strict-origin-when-cross-origin
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.104.0"
+  imports:
+    - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"

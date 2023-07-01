@@ -1,0 +1,23 @@
+# ------------------------------------------------------------
+# This project is powered by: https://taskfile.dev
+# ------------------------------------------------------------
+version: 3
+env: # <-- Project Configuration (required ENV vars)
+  VERSION: '{{ .VERSION | default "0.0.0" }}'
+silent: true # <-- Less verbose
+tasks:
+  
+  # Run the server locally
+  start: |-
+    [ -d node_modules ] || (yarn && yarn build)
+    hugo mod get -u
+    hugo server -s .
+  
+  publish: |-
+    printf "Release (%s): " $(git tag | head -n 1)
+    read tag
+    git tag $tag 
+    git push origin --tags
+
+  # Clean out all and any untracked data (incl. git changed files)
+  clean: git clean -fdx
