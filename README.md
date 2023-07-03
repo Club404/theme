@@ -1,6 +1,6 @@
 <p align="center" style="padding-top:20px">
  <img width="100px" src="static/images/logo.svg" align="center" alt="GitHub Readme Stats" />
- <h1 align="center">Club404 - Website</h1>
+ <h1 align="center">Club404 - Theme</h1>
  <p align="center">Built using an opinionated Hugo Starter with Tailwind CSS 3.2 and Alpine.js with light/dark modes.</p>
 </p>
   <p align="center">    
