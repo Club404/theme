@@ -9,8 +9,8 @@ tasks:
   
   # Run the server locally
   start: |-
-    [ -d node_modules ] || (yarn && yarn build)
-    hugo mod get -u
+    cd example
+    [ -d ./node_modules ] || yarn
     hugo server -s .
   
   publish: |-

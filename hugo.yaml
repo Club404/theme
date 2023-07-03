@@ -145,9 +145,8 @@ privacy:
 #      values:
 #        Referrer-Policy: strict-origin-when-cross-origin
 
+
+# Load the theme and other modules used in this website
 module:
-  hugoVersion:
-    extended: true
-    min: "0.104.0"
   imports:
     - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"

@@ -24,18 +24,17 @@
 
 ## Getting started
 
-By far the easiest way to get started would be to just import this theme in your hugo config:
+By far the easiest way to get started would be to just import this theme in your hugo config as a module:
 
 ```yaml title="hugo.config"
-title: Example
-baseURL: https://example.com/
-
-params:
-  ...
+title: "My New Hugo Site"
+baseURL: "http://example.org/"
+languageCode: "en-us"
 
 module:
   imports:
-    - path: github.com/club404/hugo-theme
+    - path: github.com/Club404/theme
+
 ```
 
 Then you can initialise start the website with the theme loaded:
