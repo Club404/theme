@@ -9,12 +9,11 @@ tasks:
   
   # Run the server locally
   start: |-
-    [ -d ./node_modules ] || yarn
-    yarn start
+    hugo server
 
   dev: |-
     [ -d ./node_modules ] || yarn
-    hugo server --config $PWD/local.yaml 
+    yarn start
 
   example:basic: hugo server -s ./examples/basic
   example:extended: hugo server -s ./examples/extended

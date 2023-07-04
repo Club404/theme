@@ -1,5 +1,5 @@
 body {
-    border: solid 3px red !important;
+    border: solid 1px purple !important;
 }
 
 @tailwind base;
