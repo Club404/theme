@@ -12,6 +12,8 @@ module:
     - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
 
 params:
+  #postCSS: true
+  #siteCSS: /css/style.css
 
   featured:
     heading: Our mission

@@ -9,12 +9,15 @@ tasks:
   
   # Run the server locally
   start: |-
-    cd example
     [ -d ./node_modules ] || yarn
     hugo server -s .
 
-  example:basic: hugo server -s ./examples/basic -t $PWD --config $PWD/hugo.local.yaml 
-  example:extended: hugo server -s ./examples/extended -t $PWD --config $PWD/hugo.local.yaml 
+  dev: |-
+    [ -d ./node_modules ] || yarn
+    hugo server -s ./examples/basic -t $PWD --config $PWD/local.yaml 
+
+  example:basic: hugo server -s ./examples/basic
+  example:extended: hugo server -s ./examples/extended
   
   publish: |-
     printf "Release (%s): " $(git tag | head -n 1)
