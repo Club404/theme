@@ -10,7 +10,7 @@ tasks:
   # Run the server locally
   start: |-
     [ -d ./node_modules ] || yarn
-    hugo server -s .
+    yarn start
 
   dev: |-
     [ -d ./node_modules ] || yarn
