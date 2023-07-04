@@ -22,11 +22,17 @@
   </p>
 </p>
 
+## Prerequisites
+
+This theme is designed for [Hugo](https://gohugo.io/), and it is assumed you have some knowledge of how its used as a static web server.
+
 ## Getting started
 
 By far the easiest way to get started would be to just import this theme in your hugo config as a module:
 
-```yaml title="hugo.config"
+```yaml
+# File: hugo.yaml
+
 title: "My New Hugo Site"
 baseURL: "http://example.org/"
 languageCode: "en-us"
@@ -37,13 +43,87 @@ module:
 
 ```
 
-Then you can initialise start the website with the theme loaded:
+Then you can start or build the website with this theme loaded:
 
 ```bash
-yarn
-hugo mod get -u
-hugo server -s .
+# Run the server locally
+hugo server
+
+# Or build the static site contents
+hugo --minify
+# <-- Outputs: ./public/
 ```
+
+## Adding your own contents
+
+On its own, its just an empty themed website. By adding some [markdown](https://www.markdownguide.org/cheat-sheet/) files to the `content` folder, you can add some pages to your website.
+
+Hugo uses [certain naming conventions](https://gohugo.io/content-management/organization/) to determine how sub pages are rendered. To get you started, lets create a file called: `./content/about.md`
+
+```yaml
+---
+draft: false
+title: About
+date: 2023-06-30
+description: About this theme
+language: en
+---
+
+# Hello there
+
+This is a simple placeholder where you can add your own content
+```
+
+You will notice the `envelope` of metadata that hugo uses, that is distinct and different from the page contents (markdown).
+
+This will create a new page that you can view at: `http://localhost:1313/about/`
+
+### Supported file structure
+
+The following folders are supported and monitored for your site's content:
+```yaml
+assets/         # Custom Images, CSS and Javescript
+content/        # Your actual site content (in markdown format)
+  + posts/      # Blog post entries (well known page type)
+layouts/        # You can customise or override your HTML layout
+  + partials/   # Add or extend existing partials (custom HTML)
+static/         # Additional static HTTP server content (served as-is)
+```
+
+### Page Navigation
+
+We can go one step further, and add some menu's for page navigation. Go to your `hugo.yaml` config file, to make the new `About Us` page visible on the top and bottom navigation:
+
+```yaml
+# File: hugo.yaml
+
+title: "My New Hugo Site"
+baseURL: "http://example.org/"
+languageCode: "en-us"
+
+module:
+  imports:
+    - path: github.com/Club404/theme
+
+menu:
+  main:    
+    - identifier: about
+      name: About Us
+      url: /about/
+      weight: 10
+    - identifier: posts
+      name: Blog Posts
+      url: /posts/
+      weight: 20
+  footer:
+    - identifier: about
+      name: About Us
+      url: /about/
+      weight: 10
+```
+
+
+
 
 ## Local Development
 
@@ -51,8 +131,8 @@ You can clone and run these sources on your development environment:
 
 ```bash
 # Get the sources
-git clone git@github.com:club404/website
-cd website
+git clone git@github.com:club404/theme my-site
+cd my-site
 
 # Install dependencies
 yarn        # or: npm install

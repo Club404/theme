@@ -12,9 +12,12 @@ darkmode_js: [assets/js/darkmode.js]
 enableInlineShortcodes: true
 
 module:
+  hugoVersion:
+    extended: true
+    min: "0.105.0"
   imports:
     - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
-    
+
 menu:
   main: 
     - identifier: contact
@@ -147,4 +150,3 @@ privacy:
 #    - for: /**
 #      values:
 #        Referrer-Policy: strict-origin-when-cross-origin
-
