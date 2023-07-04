@@ -20,7 +20,7 @@ tasks:
   example:extended: hugo server -s ./examples/extended
   
   publish: |-
-    printf "Release (%s): " $(git tag | head -n 1)
+    printf "Release (last: %s): " $(git tag | tail -n 1)
     read tag
     git tag $tag 
     git push origin --tags
