@@ -12,8 +12,13 @@ module:
     - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
 
 params:
-  #postCSS: true
-  #siteCSS: /css/style.css
+
+  # Build the styles dynamically in local development mode
+  styles:
+    build: true
+    theme: /css/main.css
+    extra: []
+    #  - /css/custom.css
 
   featured:
     heading: Our mission

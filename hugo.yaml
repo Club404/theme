@@ -27,9 +27,13 @@ params:
   author: Unknown
   authorimage: ../assets/images/global/users/default.webp
   
-  postCSS: false
-  siteCSS: /css/style.css
-    
+  # Use statically generated styled for theme (can be extended)
+  # See also: 'local.yaml' for how to extend
+  styles:
+    build: false
+    theme: /css/style.css
+    extra: []
+    #  - /css/custom.css
 
   banner:
     image: images/home/banner-left.png
@@ -78,15 +82,15 @@ params:
 #    heading: Latest News
 #    content:
 #      - text: "Read up on our latest news and most recent blog posts."
-#
-#  subscribe:
-#    heading: "Stay Up to Date"
-#    content:
-#      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
-#    action: "#"
-#    label: "Email address"
-#    placeholder: "Enter your email"
-#    button: "Subscribe"
+
+  subscribe:
+    heading: "Stay Up to Date"
+    content:
+      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
+    action: "#"
+    label: "Email address"
+    placeholder: "Enter your email"
+    button: "Subscribe"
 
   disable_theme_toggle: false
   disable_stay_uptodate: false

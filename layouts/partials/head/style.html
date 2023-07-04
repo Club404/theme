@@ -1,0 +1,13 @@
+
+
+{{ $target := .path }}
+{{ $build := .build }}
+{{ $styles := resources.Get $target }}
+{{ if $build }}{{ $styles = $styles | postCSS }}{{ end }}
+
+{{ if .Site.IsServer }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+{{ else }}
+{{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+{{ end }}

@@ -14,7 +14,7 @@ tasks:
 
   dev: |-
     [ -d ./node_modules ] || yarn
-    hugo server -s ./examples/basic -t $PWD --config $PWD/local.yaml 
+    hugo server --config $PWD/local.yaml 
 
   example:basic: hugo server -s ./examples/basic
   example:extended: hugo server -s ./examples/extended

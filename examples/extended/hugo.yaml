@@ -135,8 +135,12 @@ menu:
       weight: 50
 
 params:
-  postCSS: true
-  siteCSS: /css/style.css
+  # Build the styles dynamically in local development mode
+  styles:
+    build: true
+    theme: /css/custom.css
+    extra: []
+    #  - /css/custom.css
 
   author: Unknown
   authorimage: ../assets/images/global/users/default.webp  
