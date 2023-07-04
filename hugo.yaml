@@ -12,7 +12,7 @@ darkmode_js: [assets/js/darkmode.js]
 enableInlineShortcodes: true
 
 menu:
-  main:    
+  main: 
     - identifier: contact
       name: Contact Us
       url: /contact/
@@ -78,15 +78,15 @@ params:
 #    heading: Latest News
 #    content:
 #      - text: "Read up on our latest news and most recent blog posts."
-
-  subscribe:
-    heading: "Stay Up to Date"
-    content:
-      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
-    action: "#"
-    label: "Email address"
-    placeholder: "Enter your email"
-    button: "Subscribe"
+#
+#  subscribe:
+#    heading: "Stay Up to Date"
+#    content:
+#      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
+#    action: "#"
+#    label: "Email address"
+#    placeholder: "Enter your email"
+#    button: "Subscribe"
 
   disable_theme_toggle: false
   disable_stay_uptodate: false

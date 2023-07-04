@@ -8,3 +8,39 @@ module:
     min: "0.104.0"
   imports:
     - path: github.com/Club404/theme
+
+menu:
+  main:    
+    - identifier: about
+      name: About Us
+      url: /about/
+      weight: 10
+    - identifier: posts
+      name: Blog Posts
+      url: /posts/
+      weight: 20
+    - identifier: contact
+      name: Contact Us
+      url: /contact/
+      weight: 100
+  footer:
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+
+params:
+
+  news:
+    heading: Latest News
+    content:
+      - text: "Read up on our latest news and most recent blog posts."
+
+  subscribe:
+    heading: "Stay Up to Date"
+    content:
+      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
+    action: "#"
+    label: "Email address"
+    placeholder: "Enter your email"
+    button: "Subscribe"
