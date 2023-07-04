@@ -4,5 +4,7 @@ github.com/Club404/theme v0.0.0-20230704113225-625fd59910be h1:8btDYOcBejQfely1b
 github.com/Club404/theme v0.0.0-20230704113225-625fd59910be/go.mod h1:cvo626EvjwdoqvwwlQoqIke56hnI1E6px4YncE72lgw=
 github.com/Club404/theme v0.0.0-20230704143246-94dc7b2d7536 h1:/eLSilWliNtJukbaLS8BMOQZzEcWTGGXrxVONke/1bo=
 github.com/Club404/theme v0.0.0-20230704143246-94dc7b2d7536/go.mod h1:cvo626EvjwdoqvwwlQoqIke56hnI1E6px4YncE72lgw=
+github.com/Club404/theme v0.0.0-20230704154357-edec2cd579f8 h1:V/r8Fs68MfHo32SCrTmBAsJCAZ2hfEoG+OFly5Hd57M=
+github.com/Club404/theme v0.0.0-20230704154357-edec2cd579f8/go.mod h1:cvo626EvjwdoqvwwlQoqIke56hnI1E6px4YncE72lgw=
 gitlab.com/kaushalmodi/hugo-mwe-theme v0.1.1 h1:FyTp43CJRpBfoHyWnwQFx//cipgP6xQ9/uucj+qjj1U=
 gitlab.com/kaushalmodi/hugo-mwe-theme v0.1.1/go.mod h1:vvq0r/SfKMbiPbyqL4YottSOkpCkBSosqGRm82aDNrU=
