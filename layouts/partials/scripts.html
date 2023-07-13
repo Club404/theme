@@ -1,0 +1,5 @@
+<!-- Add scripts -->
+{{ $alpine := resources.Get "js/alpine.js" | js.Build }}
+{{ $js := resources.Get "js/darkmode.js" | js.Build }}
+<script src="{{ $alpine.RelPermalink }}" defer></script>
+<script src="{{ $js.RelPermalink }}" defer></script>

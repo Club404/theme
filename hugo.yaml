@@ -19,16 +19,16 @@ module:
     - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
 
 menu:
-  main: 
-    - identifier: contact
-      name: Contact Us
-      url: /contact/
-      weight: 100
-  footer:
-    - identifier: contact
-      name: Contact
-      url: /contact/
-      weight: 50
+  main: []
+  #  - identifier: contact
+  #    name: Contact Us
+  #    url: /contact/
+  #    weight: 100
+  footer: []
+  #  - identifier: contact
+  #    name: Contact
+  #    url: /contact/
+  #    weight: 50
 
 params:
   author: Unknown
@@ -110,7 +110,7 @@ params:
     instagram:
       enabled: false
     github:
-      enabled: true
+      enabled: false
       url: 'https://github.com/club404/theme'
     
 markup:
