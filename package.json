@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "concurrently npm:watch:*",
-    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
+    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/theme.css --watch",
     "watch:hugo": "hugo server --config $PWD/local.yaml",
     "build": "hugo --minify",
     "test": "hugo"

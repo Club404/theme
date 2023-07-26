@@ -147,7 +147,7 @@ You can compile the website into static content, by running:
 # To generate the site HTML
 yarn build  # or: npm run build
 # --> This will run two commands parallel:
-#  <- npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch
+#  <- npx tailwindcss -i ./assets/css/main.css -o ./assets/css/theme.css --watch
 #  <- hugo server
 ```
 
