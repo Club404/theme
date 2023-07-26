@@ -38,7 +38,7 @@ params:
   # Scripts to include
   scripts:
     darkmode: js/darkmode.js
-    alpine.js: js/alpine.js
+    #alpine.js: js/alpine.js
 
 
   banner:

@@ -1,0 +1,7 @@
+{{- if .Site.Params.styles -}}
+{{- $styles := .Site.Params.styles -}}
+{{- partial "head/link-css" (dict "path" $styles.theme "build" $styles.build) -}}
+{{- range .Site.Params.styles.extra -}}
+    {{- partial "head/link-css" (dict "path" . "build" $styles.build) -}}
+{{- end -}}
+{{- end -}}
