@@ -1,6 +1,7 @@
 ---
-author: club404.io
+author: Unknown
 title: "{{ replace .Name "-" " " | title }}"
+draft: true
 date: {{ .Date }}
 ---
 
