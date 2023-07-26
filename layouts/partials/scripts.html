@@ -1,5 +1,11 @@
 <!-- Add scripts -->
-{{ $alpine := resources.Get "js/alpine.js" | js.Build }}
 {{ $js := resources.Get "js/darkmode.js" | js.Build }}
-<script src="{{ $alpine.RelPermalink }}" defer></script>
 <script src="{{ $js.RelPermalink }}" defer></script>
+
+
+<!-- Add all scripts defined in the hugo config file -->
+{{ define "scripts" }}
+{{- range $key,$path := .Site.Params.scripts -}}
+<script src="{{ (resources.Get $path | js.Build).RelPermalink }}" defer></script>
+{{- end }}
+{{ end }}

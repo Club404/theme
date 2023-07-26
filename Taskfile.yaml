@@ -9,6 +9,7 @@ tasks:
   
   # Run the server locally
   start: |-
+    hugo mod get -u
     hugo server
 
   dev: |-

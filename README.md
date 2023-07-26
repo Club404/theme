@@ -1,7 +1,7 @@
 <p align="center" style="padding-top:20px">
  <img width="100px" src="static/images/logo.svg" align="center" alt="GitHub Readme Stats" />
  <h1 align="center">Club404 - Theme</h1>
- <p align="center">Built using an opinionated Hugo Starter with Tailwind CSS 3.2 and Alpine.js with light/dark modes.</p>
+ <p align="center">Built using an opinionated Hugo starter template with Tailwind CSS 3.2 and Alpine.js with light/dark modes.</p>
 </p>
   <p align="center">    
     <a href="https://gohugo.io/">
@@ -74,7 +74,7 @@ language: en
 This is a simple placeholder where you can add your own content
 ```
 
-You will notice the `envelope` of metadata that hugo uses, that is distinct and different from the page contents (markdown).
+You will notice the metadata (also called the `front matter`) that hugo uses, that is distinct and different from the page contents (markdown).
 
 This will create a new page that you can view at: `http://localhost:1313/about/`
 
@@ -85,7 +85,7 @@ The following folders are supported and monitored for your site's content:
 assets/         # Custom Images, CSS and Javescript
 content/        # Your actual site content (in markdown format)
   + posts/      # Blog post entries (well known page type)
-layouts/        # You can customise or override your HTML layout
+layouts/        # You can customise, extend or override your HTML layout
   + partials/   # Add or extend existing partials (custom HTML)
 static/         # Additional static HTTP server content (served as-is)
 ```

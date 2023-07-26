@@ -1,15 +1,15 @@
-title: "My New Hugo Site"
-baseURL: "http://example.org/"
-languageCode: "en-us"
+title: Local Host
+baseURL: 
+languageCode: en-us
 
 module:
+  imports:
+# When loading the theme directly, we need to import dependencies  
+    - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
+#   - path: github.com/Club404/theme
   hugoVersion:
     extended: true
     min: "0.104.0"
-  imports:
-# When loading the theme directly, we need to import dependencies  
-#   - path: github.com/Club404/theme
-    - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
 
 params:
 
@@ -23,7 +23,7 @@ params:
   banner:
     image: images/home/banner-left.png
     heading: Example demo site for this theme
-    description: This is a theme created for club404.io, designed and made for Hugo
+    description: This theme was created for club404.io, designed in Hugo
 
 #  featured:
 #    heading: Our mission

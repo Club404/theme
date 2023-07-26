@@ -1,20 +1,11 @@
+# Basic hugo configuration settings
+# - See also: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 title: Your Website
-baseURL: ''
-languageCode: en-us
+baseURL: ""
 
-DefaultContentLanguage: en
-enableEmoji: true
-enableGitInfo: true
-enableRobotsTXT: true
-canonifyURLs: true
-paginate: 9
-darkmode_js: [assets/js/darkmode.js]
-enableInlineShortcodes: true
-
+# Import required modules
 module:
-  hugoVersion:
-    extended: true
-    min: "0.105.0"
+  hugoVersion: { min: "0.112.7", extended: true }
   imports:
     - path: "github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3"
 
@@ -31,64 +22,72 @@ menu:
   #    weight: 50
 
 params:
+  # Define the defaults for unknown authors
   author: Unknown
   authorimage: ../assets/images/global/users/default.webp
-  
-  # Use statically generated styled for theme (can be extended)
+
+  # Use statically generated styles for theme (can be extended)
   # See also: 'local.yaml' for how to extend
   styles:
-    build: false
-    theme: /css/style.css
+    build: true
+    theme: /css/main.css # Load the 
+    # You can add your own custom themes by extending this property in your hugo config
     extra: []
     #  - /css/custom.css
+
+  # Scripts to include
+  scripts:
+    darkmode: js/darkmode.js
+    alpine.js: js/alpine.js
+
 
   banner:
     image: images/home/banner-left.png
     heading: Example demo site for this theme
     description: This is a theme created for club404.io, designed and made for Hugo
 
-#  featured:
-#    heading: Our mission
-#    image: images/home/our-mission.png
-#    content:
-#      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
-#      - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
-#      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
-#    links:
-#      - text: Read more about our Software Architecture
-#        url: "#"
-#
-#  featured2:
-#    heading: Some more featured content
-#    image: images/home/our-mission.png
-#    content:
-#      - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
-#      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
-#    links:
-#      - text: See more
-#        url: "#"
-#
-#  partners:
-#    heading: Our partners
-#    content:
-#      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
-#    links:
-#      - text: Contact us!
-#        url: "#"
-#    logos:
-#      - identifier: a
-#        image: "images/global/backers/default-white.svg"
-#        alt: "a"
-#      - identifier: b
-#      - identifier: c
-#      - identifier: d
-#      - identifier: e
-#      - identifier: f
-#
-#  news:
-#    heading: Latest News
-#    content:
-#      - text: "Read up on our latest news and most recent blog posts."
+  #  featured:
+  #    heading: Our mission
+  #    image: images/home/our-mission.png
+  #    content:
+  #      - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
+  #      - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
+  #      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+  #    links:
+  #      - text: Read more about our Software Architecture
+  #        url: "#"
+  #
+  #  featured2:
+  #    heading: Some more featured content
+  #    image: images/home/our-mission.png
+  #    content:
+  #      - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
+  #      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+  #    links:
+  #      - text: See more
+  #        url: "#"
+  #
+  #  partners:
+  #    heading: Our partners
+  #    content:
+  #      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+  #    links:
+  #      - text: Contact us!
+  #        url: "#"
+  #    logos:
+  #      - identifier: a
+  #        image: "images/global/backers/default-white.svg"
+  #        alt: "a"
+  #      - identifier: b
+  #      - identifier: c
+  #      - identifier: d
+  #      - identifier: e
+  #      - identifier: f
+  #
+  #  news:
+  #    heading: Latest News
+  #    content:
+  #      - text: "Read up on our latest news and most recent blog posts."
 
   subscribe:
     heading: "Stay Up to Date"
@@ -111,8 +110,8 @@ params:
       enabled: false
     github:
       enabled: false
-      url: 'https://github.com/club404/theme'
-    
+      url: "https://github.com/club404/theme"
+
 markup:
   goldmark:
     renderer:
@@ -144,7 +143,6 @@ privacy:
   youtube:
     disable: false
     privacyEnhanced: true
-
 #server:
 #  headers:
 #    - for: /**
