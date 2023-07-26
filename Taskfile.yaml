@@ -6,6 +6,10 @@ env: # <-- Project Configuration (required ENV vars)
   VERSION: '{{ .VERSION | default "0.0.0" }}'
 silent: true # <-- Less verbose
 tasks:
+
+  # Start theme with an example site
+  example:basic: hugo server -s ./exampleSites/basic
+  example:extended: hugo server -s ./exampleSites/extended
   
   # Run the server locally
   start: |-
@@ -15,9 +19,6 @@ tasks:
   dev: |-
     [ -d ./node_modules ] || yarn
     yarn start
-
-  example:basic: hugo server -s ./examples/basic
-  example:extended: hugo server -s ./examples/extended
   
   publish: |-
     printf "Release (last: %s): " $(git tag | tail -n 1)
