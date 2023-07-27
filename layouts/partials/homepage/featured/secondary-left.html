@@ -1,30 +1,5 @@
-{{ if .Site.Params.Featured2 }}
-<!-- Hero section -->
 <div class="relative my-4">
     <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-        <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
-            <!-- Content area -->
-            <div class="md:pt-12 sm:pt-6 lg:pt-20">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
-                    {{ .Site.Params.Featured2.Heading }}
-                </h2>
-                <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
-                    {{ range .Site.Params.Featured2.Content }}
-                    <p class="pb-6 mt-6 text-lg text-gray-900 dark:text-white">
-                        {{ .text }}
-                    </p>
-                    {{ end }}
-                </div>
-                {{ range .Site.Params.Featured2.Links }}
-                <div class="my-6">
-                    <a href="{{ .url }}" class="text-base font-medium text-primary-400 dark:text-primary-100">
-                        {{ .text }}&nbsp&rarr;
-                    </a>
-                </div>
-                {{ end }}    
-            </div>
-        </div>
-
         <div class="relative sm:py-8 lg:py-0">
             <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:left-0">
                 <svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:right-auto lg:top-12" width="404"
@@ -41,7 +16,7 @@
             </div>
             <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-20 lg:py-20">
                 <div class="relative pt-64 pb-10 overflow-hidden shadow-xl rounded-2xl">
-                    {{ $p2image := resources.Get .Site.Params.Featured2.Image }}
+                    {{ $p2image := resources.Get .image }}
                     {{ with $p2image }}
                     {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
                     <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
@@ -52,6 +27,27 @@
                 </div>
             </div>
         </div>
+        <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+            <!-- Content area -->
+            <div class="md:pt-12 sm:pt-6 lg:pt-20">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                    {{ .heading }}
+                </h2>
+                <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
+                    {{ range .content }}
+                    <p class="pb-6 mt-6 text-lg text-gray-900 dark:text-white">
+                        {{ .text }}
+                    </p>
+                    {{ end }}
+                </div>
+                {{ range .links }}
+                <div class="my-6">
+                    <a href="{{ .url }}" class="text-base font-medium text-primary-400 dark:text-primary-100">
+                        {{ .text }}&nbsp&rarr;
+                    </a>
+                </div>
+                {{ end }}    
+            </div>
+        </div>
     </div>
 </div>
-{{ end }}

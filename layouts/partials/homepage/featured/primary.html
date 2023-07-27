@@ -1,5 +1,3 @@
-{{ if .Site.Params.Featured }}
-<!-- Our mission section -->
 <div class="relative my-4">
     <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
         <div class="relative sm:py-8 lg:py-0">
@@ -18,7 +16,7 @@
             </div>
             <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
                 <div class="relative pt-64 pb-10 overflow-hidden shadow-xl rounded-2xl">
-                    {{ $p1image := resources.Get .Site.Params.Featured.Image }}
+                    {{ $p1image := resources.Get .image }}
                     {{ with $p1image }}
                     {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
                     <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
@@ -34,16 +32,16 @@
             <!-- Content area -->
             <div class="md:pt-12 sm:pt-6 lg:pt-20">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
-                    {{ .Site.Params.Featured.Heading }}
+                    {{ .heading }}
                 </h2>
                 <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
-                    {{ range .Site.Params.Featured.Content }}
+                    {{ range .content }}
                     <p class="pb-6 mt-6 text-lg text-gray-900 dark:text-white">
                         {{ .text }}
                     </p>
                     {{ end }}
                 </div>
-                {{ range .Site.Params.Featured.Links }}
+                {{ range .links }}
                 <div class="my-6">
                     <a href="{{ .url }}" class="text-base font-medium text-primary-400 dark:text-primary-100">
                         {{ .text }}&nbsp&rarr;
@@ -55,4 +53,3 @@
         </div>
     </div>
 </div>
-{{ end }}

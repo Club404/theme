@@ -1,5 +1,9 @@
 {{ define "main" }}
 <main>
-    {{ partial "hero/main" . }}    
+    {{ if .Site.Params.Homepage }}
+        {{ partial "homepage/main" . }}
+    {{ else }}
+        {{ partial "main" . }}
+    {{ end }}
 </main>
 {{ end }}

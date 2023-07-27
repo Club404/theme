@@ -1,4 +1,4 @@
-{{ if .Site.Params.News }}
+{{ if and .Pages .Site.Params.Homepage.News }}
 <!-- Blog section -->
 <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12" style="margin-top: 0">
     <div class="absolute inset-0">
@@ -8,9 +8,9 @@
         <div class="text-center">
             <h2
                 class="text-3xl font-black tracking-tight text-primary-500 dark:text-primary-300 sm:text-4xl">
-                {{ .Site.Params.News.Heading }}
+                {{ .Site.Params.Homepage.News.heading }}
             </h2>
-            {{ range .Site.Params.News.Content }}
+            {{ range .Site.Params.Homepage.News.content }}
             <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 dark:text-gray-300 sm:mt-4">
                 {{ .text }}
             </p>

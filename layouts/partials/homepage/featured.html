@@ -1,0 +1,11 @@
+{{ range $i, $item := .Site.Params.Homepage.Featured }}
+
+{{ if eq $i 0 }}
+{{ partial "homepage/featured/primary" $item }}
+{{ else if eq 0 (mod $i 2) }}
+{{ partial "homepage/featured/secondary-left" $item }}
+{{ else }}
+{{ partial "homepage/featured/secondary-right" $item }}
+{{ end }}
+
+{{ end }}
