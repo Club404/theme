@@ -8,5 +8,5 @@
 </script>
 <!-- Add all scripts defined in the hugo config file -->
 {{- range $key,$path := .Site.Params.scripts }}
-<script src="{{ (resources.Get $path | js.Build).RelPermalink }}" defer></script>
+<script src="{{ (resources.Get $path | js.Build).RelPermalink }}" type="text/javascript" defer></script>
 {{- end }}

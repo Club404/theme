@@ -34,12 +34,12 @@ params:
     # You can add your own custom themes by extending this property in your hugo config
     extra: []
     #  - /css/custom.css
+    bodyClass: debug
 
   # Scripts to include
   scripts:
     darkmode: js/darkmode.js
-    #alpine.js: js/alpine.js
-
+    alpine.ts: ts/alpine.ts
 
   banner:
     image: images/home/banner-left.png
@@ -111,6 +111,7 @@ params:
     github:
       enabled: false
       url: "https://github.com/club404/theme"
+
 
 markup:
   goldmark:
