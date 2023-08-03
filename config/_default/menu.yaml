@@ -1,0 +1,17 @@
+# -------------------------------------------------------------------
+# The 'main' menu is typically displayed in the app toolbar
+# -------------------------------------------------------------------
+main: []
+#  - identifier: contact
+#    name: Contact Us
+#    url: /contact/
+#    weight: 100
+
+# -------------------------------------------------------------------
+# The 'footer' menu is typically displayed at the bottom 
+# -------------------------------------------------------------------
+footer: []
+#  - identifier: contact
+#    name: Contact
+#    url: /contact/
+#    weight: 50

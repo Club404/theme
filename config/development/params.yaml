@@ -1,0 +1,10 @@
+# In local development mode, we will dynamically build the styles
+styles:
+  build: true
+  theme: /css/main.css # Load the
+
+# Scripts to include
+#scripts:
+#  alpine: ts/alpine.ts
+#  darkmode: js/darkmode.js
+

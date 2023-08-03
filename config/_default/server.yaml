@@ -1,0 +1,7 @@
+# -------------------------------------------------------------------
+# Add config and headers, used when running via 'hugo server' mode
+# -------------------------------------------------------------------
+headers: []
+#  - for: /**
+#    values:
+#      Referrer-Policy: strict-origin-when-cross-origin

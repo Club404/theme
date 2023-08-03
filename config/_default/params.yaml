@@ -1,0 +1,86 @@
+# Define the defaults for unknown authors
+author: Unknown
+authorimage: ../assets/images/global/users/default.webp
+
+# Use statically generated styles for theme (can be extended)
+# See also: 'local.yaml' for how to extend
+styles:
+  build: false
+  theme: /css/theme.css # Load the
+  # You can add your own custom themes by extending this property in your hugo config
+  extra: []
+  #  - /css/custom.css
+  bodyClass: "" # You can override the body CSS class if you want
+
+# Scripts to include
+scripts:
+  alpine: ts/alpine.ts
+  darkmode: js/darkmode.js
+
+homepage:
+  title: "" # If not set, will use global site title instead
+  image: images/home/banner-left.png
+  heading: Example home page for this theme
+  description: Home page content can be changed in your config file.
+  partiial: "" # If set, it will use this partial instead
+  featured:
+    - heading: Our mission
+      image: images/home/our-mission.png
+      content:
+        - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
+        - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
+        - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+      links:
+        - text: Read more about our Software Architecture
+          url: "#"
+    - heading: Some more featured content
+      image: images/home/our-mission.png
+      content:
+        - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
+        - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+      links:
+        - text: See more
+          url: "#"
+  partners:
+    heading: Our partners
+    content:
+      - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+    links:
+      - text: Contact us!
+        url: "#"
+    logos:
+      - identifier: a
+        image: "images/global/backers/default-white.svg"
+        alt: "a"
+      - identifier: b
+      - identifier: c
+      - identifier: d
+      - identifier: e
+      - identifier: f
+  news:
+    heading: Latest News
+    content:
+      - text: "Read up on our latest news and most recent blog posts."
+  subscribe:
+    enabled: true
+    heading: Stay Up to Date
+    content:
+      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
+    action: "#"
+    label: "Email address"
+    placeholder: "Enter your email"
+    button: "Subscribe"
+
+disable_theme_toggle: false
+
+social_media:
+  twitter:
+    enabled: false
+  facebook:
+    enabled: false
+  instagram:
+    enabled: false
+  github:
+    enabled: false
+    url: "https://github.com/club404/theme"
+
