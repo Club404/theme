@@ -1,13 +1,9 @@
-title: "My New Hugo Site"
-baseURL: "http://example.org/"
-languageCode: "en-us"
+title: "My Basic Site"
+theme: github.com/Club404/theme
 
-module:
-  imports:
-    - path: github.com/Club404/theme
 
 menu:
-  main:    
+  main:
     - identifier: about
       name: About Us
       url: /about/
@@ -27,7 +23,6 @@ menu:
       weight: 50
 
 params:
-
   news:
     heading: Latest News
     content:
