@@ -1,4 +1,6 @@
+go.mod
+go.sum
 .hugo_build.lock
 assets/jsconfig.json
-node_modules
-resources
+node_modules/
+resources/

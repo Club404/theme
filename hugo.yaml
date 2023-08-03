@@ -9,6 +9,7 @@
 # - config/_default/server.yaml
 # - config/_default/taxonomies.yaml
 # -------------------------------------------------------------------
+# Base Config
 title: Your Website
 baseURL: ''
 
