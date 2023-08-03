@@ -1,7 +1,7 @@
 # In local development mode, we will dynamically build the styles
-styles:
-  build: true
-  theme: /css/main.css # Load the
+#styles:
+#  build: true
+#  theme: /css/custom.css 
 
 # Scripts to include
 #scripts:

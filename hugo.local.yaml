@@ -10,8 +10,15 @@
 # - config/_default/taxonomies.yaml
 # -------------------------------------------------------------------
 # Base Config
-title: Your Website
+title: Local Development
 baseURL: ""
+
+# Site parameters
+params:
+  # Dynamically build the styles in dev mode
+  styles:
+    build: true
+    theme: /css/main.css # Load the theme styles
 
 # Import module dependencies used by this theme
 module:
