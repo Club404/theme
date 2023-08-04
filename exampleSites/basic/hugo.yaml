@@ -1,6 +1,21 @@
 title: My Basic Site
 theme: github.com/Club404/theme
 
+params:
+  news:
+    heading: Latest News
+    content:
+      - text: "Read up on our latest news and most recent blog posts."
+
+  subscribe:
+    heading: "Stay Up to Date"
+    content:
+      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
+    action: "#"
+    label: "Email address"
+    placeholder: "Enter your email"
+    button: "Subscribe"
+
 menu:
   main:
     - identifier: about
@@ -20,18 +35,3 @@ menu:
       name: Contact
       url: /contact/
       weight: 50
-
-params:
-  news:
-    heading: Latest News
-    content:
-      - text: "Read up on our latest news and most recent blog posts."
-
-  subscribe:
-    heading: "Stay Up to Date"
-    content:
-      - text: "If you want to subscribe to our newsletter, please enter your email address  below."
-    action: "#"
-    label: "Email address"
-    placeholder: "Enter your email"
-    button: "Subscribe"
