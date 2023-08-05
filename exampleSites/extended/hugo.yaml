@@ -1,14 +1,13 @@
 title: My Extended Site
-#baseURL: "http://example.org/"
 theme: github.com/Club404/theme
 
 params:
   # Build the styles dynamically in local development mode
-  #styles:
-  #  build: true
-  #  theme: /css/main.css
-  #  extra: []
-  #  #  - /css/custom.css
+  styles:
+    build: true
+    theme: /css/custom.css
+    extra: 
+      - /css/theme.css # Include original theme
 
   homepage:
     title: "" # If not set, will use global site title instead
