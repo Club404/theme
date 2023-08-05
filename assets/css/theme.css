@@ -1989,6 +1989,10 @@ body {
   color: white !important;
 }
 
+.main {
+  min-height: 80vh;
+}
+
 /* Custom CSS end */
 
 :is(.dark .dark\:prose-invert) {
