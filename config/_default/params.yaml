@@ -14,7 +14,7 @@ styles:
 
 # Scripts to include
 scripts:
-  alpine: ts/alpine.ts
+  alpine: js/alpine.js
   darkmode: js/darkmode.js
 
 homepage:
