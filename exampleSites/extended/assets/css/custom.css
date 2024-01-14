@@ -23,7 +23,7 @@ EmojiSymbols;
 /* Custom Theme CSS */
 
 body {
-    @apply bg-zinc-100 dark:bg-gray-800;
+    @apply h-screen bg-zinc-100 dark:bg-gray-800;
 }
 
 .prose :where(h1):not(:where([class~="not-prose"] *)) {
