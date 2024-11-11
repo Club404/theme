@@ -1981,6 +1981,7 @@ EmojiSymbols;
 /* Custom Theme CSS */
 
 body {
+  height: 100vh;
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity));
 }
